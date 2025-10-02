@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+# Travel AI Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an AI-powered travel discovery platform designed to help users find their perfect journey through natural language search. The application leverages AI to interpret user queries, apply relevant filters, and display a curated list of travel experiences.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+-   **AI-Powered Search**: Users can type complex queries in natural language (e.g., "luxury trips in Asia under $4000").
+-   **Dynamic Filtering**: The AI automatically parses queries to generate filters for price, duration, destination, trip type, and more.
+-   **Interactive UI**: A clean, responsive interface built with React and Tailwind CSS for a seamless user experience.
+-   **Filter Management**: Users can view the filters applied by the AI and remove them to refine the search results.
+-   **Fallback Logic**: Includes a robust fallback to keyword-based searching if the AI service is unavailable.
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   **Frontend**: [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **AI**: [OpenAI GPT-3.5 Turbo](https://openai.com/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Build Tool**: [Craco](https://craco.js.org/) for Create React App configuration overrides.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+-   [Node.js](https://nodejs.org/) (v16 or later recommended)
+-   [npm](https://www.npmjs.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Environment Variables
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project requires an OpenAI API key to function. You'll need to create a `.env` file in the `travel-ai-search` directory and add your key.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.  Create a new file named `.env` at the root of the `travel-ai-search` project.
+2.  Add the following line to the file, replacing `your_openai_api_key_here` with your actual key:
 
-### `npm run eject`
+```env
+REACT_APP_OPENAI_API_KEY=your_openai_api_key_here
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installation & Running
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.  **Clone the repository**
+    ```sh
+    git clone https://github.com/GoceS1/AI_search.git
+    cd AI_search/travel-ai-search
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2.  **Install dependencies**
+    ```sh
+    npm install
+    ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3.  **Run the development server**
+    The application will be available at `http://localhost:3000`.
+    ```sh
+    npm start
+    ```
 
-## Learn More
+## 📂 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+travel-ai-search/
+├── public/              # Static assets and index.html
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── data/            # Static data like trip information
+│   ├── services/        # AI service logic and API calls
+│   ├── utils/           # Utility functions
+│   ├── App.tsx          # Main application component
+│   └── index.tsx        # Entry point of the React app
+├── .env                 # Environment variables (needs to be created)
+├── craco.config.js      # Craco configuration
+├── tailwind.config.js   # Tailwind CSS configuration
+└── package.json         # Project dependencies and scripts
+```
